@@ -90,7 +90,7 @@ body {
   animation: fade_in 3s forwards;
 }
 
-@media (width <= 500px) {
+@media (width <= 600px) {
   .container .top_bg_wrap .title {
     gap: 1rem;
   }
