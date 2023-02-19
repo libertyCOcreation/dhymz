@@ -71,6 +71,8 @@ body {
       visibility: collapse;
       opacity: 0;
       width: 30%;
+      aspect-ratio: 1 / 1;
+      overflow:hidden;
       img {
         // border-radius: 10px;
         width: 100%;
