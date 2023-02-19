@@ -1,19 +1,68 @@
-*{
+* {
     box-sizing: border-box;
-    font-size:14px;
+    font-size: 14px;
 }
-    body{
+
+body {
     margin: 0;
     padding: 0;
 }
-.container{
-    width:100%;
+
+.container {
+    width: 100%;
     height: 100svh;
     background: #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p{
-        color:white;
+
+    .top_bg_wrap {
+        position: relative;
+            overflow: hidden;
+
+        .bcimg {
+            width: 100%;
+            height: 50svh;
+            background-image: url("image/vr.jpg");
+            filter: blur(4px);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            position: relative;
+            z-index: 2;
+
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 3;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50svh;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        .title {
+            width: 100%;
+            height: 50svh;
+             margin-left:2em;
+            font-size: 3em;
+            color: white;
+            position: absolute;
+                top: 0;
+                left: 0;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (0px < width < 1000px){
+    .container{
+        .top_bg_wrap{
+            .title{
+            font-size: 2em;
+
+            }
+        }
     }
 }
