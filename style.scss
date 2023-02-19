@@ -1,129 +1,149 @@
 * {
-  box-sizing: border-box;
-  font-size: 14px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  width: 100%;
-  background: #222;
+    width: 100%;
+    background: #222;
 
-  .top_bg_wrap {
-    position: relative;
-    overflow: hidden;
+    //  comp_01
+    .top_bg_wrap {
+        position: relative;
+        overflow: hidden;
 
-    .bcimg {
-      width: 100%;
-      height: 100svh;
-      background-image: url("image/vr.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: top;
-      position: relative;
-      z-index: 2;
+        .bcimg {
+            width: 100%;
+            height: 100svh;
+            background-image: url("image/vr.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            background-attachment: fixed;
+            position: relative;
+            z-index: 2;
 
-      &:before {
-        content: "";
-        position: absolute;
-        z-index: 3;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100svh;
-        background-color: rgba(0, 0, 0, 0.7);
-      }
-    }
-
-    .title {
-      width: 100%;
-      height: 100svh;
-      margin-left: 6em;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 4;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      color: whitesmoke;
-      .title_large {
-        font-size: 12em;
-        letter-spacing: 2px;
-        font-weight: 900;
-      }
-      .title_smoll {
-        font-size: 2em;
-        letter-spacing: 4px;
-      }
-    }
-  }
-
-  .contents {
-    padding: 10em 0;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    .content_wrap {
-      visibility: collapse;
-      opacity: 0;
-      width: 30%;
-      aspect-ratio: 1 / 1;
-      overflow:hidden;
-      img {
-        border-radius: 2px;
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        transition: 0.4s;
-        &:hover {
-          transition: 0.4s;
-          transform: scale(1.2);
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 3;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100svh;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
         }
-      }
+
+        .title {
+            width: 100%;
+            height: 100svh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: whitesmoke;
+
+            .title_large {
+                font-size: 12em;
+                letter-spacing: 2px;
+                font-weight: 900;
+            }
+
+            .title_smoll {
+                font-size: 2em;
+                letter-spacing: 4px;
+            }
+        }
     }
-  }
+
+    //  comp_02
+    .contents {
+        padding: 10em 0;
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+
+        .content_wrap {
+            visibility: collapse;
+            opacity: 0;
+            width: 30%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+
+            img {
+                border-radius: 2px;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                transition: 0.4s;
+
+                &:hover {
+                    transition: 0.4s;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
 }
 
 // JS使用セレクタ
 .visible_mode {
-  visibility: visible !important;
-  animation: fade_in 1s ease-in forwards;
+    visibility: visible !important;
+    animation: fade_in 3s forwards;
 }
 
-// SP, TB対応
-@media (width <= 700px) {
-  .container {
-    .top_bg_wrap {
-      .title {
-        margin: 0;
-        align-items: center;
-        gap: 1rem;
-        .title_large {
-          font-size: 4em;
-          letter-spacing: 2px;
+// SP対応
+@media (width <=500px) {
+    .container {
+
+        //  comp_01
+        .top_bg_wrap {
+            .title {
+                gap: 1rem;
+
+                .title_large {
+                    font-size: 6em;
+                    letter-spacing: 2px;
+                }
+
+                .title_smoll {
+                    font-size: 1em;
+                    letter-spacing: 2px;
+                }
+            }
         }
-        .title_smoll {
-          font-size: 1em;
-          letter-spacing: 2px;
+
+        //  comp_02
+        .contents {
+            padding: 5em 0;
+            flex-wrap: wrap;
+
+            .content_wrap {
+                width: 100%;
+            }
         }
-      }
     }
-  }
 }
+
+// animation
 @keyframes fade_in {
-  0% {
-    opacity: 0;
-    transform: translateY(150px);
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
