@@ -68,8 +68,11 @@ body {
   visibility: collapse;
   opacity: 0;
   width: 30%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
 }
 .container .contents .content_wrap img {
+  border-radius: 2px;
   width: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
@@ -78,7 +81,7 @@ body {
 }
 .container .contents .content_wrap img:hover {
   transition: 0.4s;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .visible_mode {
