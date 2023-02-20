@@ -1,7 +1,5 @@
 // c o n t e n t s
 // content_wrapがviewport に入ったらfade in
-const container = document.querySelector(".container");
-
 window.addEventListener("scroll", () => {
   const scroll_value = window.scrollY;
   console.log("container_scrollTop", scroll_value);
@@ -55,5 +53,4 @@ function open_subcontentent(open_no) {
 
   const sub_contents_wraps = document.querySelectorAll(".sub_contents_wrap");
   sub_contents_wraps[open_no].classList.add("visible_mode_2");
-
 }
