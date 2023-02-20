@@ -84,7 +84,7 @@ body {
     //  comp_02 / content parents
     .contents_wrap {
         margin: 0 auto;
-        padding: 10em 2em 3em;
+        padding: 10em 2em;
         max-width: 1920px;
         visibility: collapse;
         opacity: 0;
@@ -133,18 +133,77 @@ body {
 
     //  comp_03 / content childs
     .sub_contents_wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
         width: 100%;
         height: 0;
+        background: #222;
         visibility: collapse;
         opacity: 0;
         padding: 0 2em 3em;
         overflow: hidden;
 
+        .sub_container {
+            max-width: 1920px;
+            margin: 0 auto;
+
+            .sub_contents_wrap_header {
+                height: 80px;
+                display: flex;
+                align-items: center;
+
+                .btn_close {
+                    cursor: pointer;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                    letter-spacing: 2px;
+                    padding: 0 3em;
+
+                    span {
+                        color: white;
+                    }
+                }
+            }
+
+            .explanation {
+                max-width:900px;
+                min-height: 100px;
+                margin: 3em auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap:2em;
+
+                .big_title {
+                    font-size: 32px;
+                    color: white;
+                    letter-spacing: 2px;
+                    text-align: center;
+                }
+
+                .small_title {
+                    font-size: 16px;
+                    color: white;
+                    letter-spacing: 2px;
+                    text-align: center;
+
+                }
+
+            }
+
+        }
+
         .sub_contents {
+            max-width: 1920px;
+            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            ;
             gap: 3em;
 
             .content {
@@ -152,17 +211,12 @@ body {
                 aspect-ratio: 4 / 3;
                 overflow: hidden;
 
-                img {
+                video {
                     border-radius: 2px;
                     width: 100%;
                     aspect-ratio: 4 / 3;
                     object-fit: cover;
                     transition: 0.4s;
-
-                    &:hover {
-                        transition: 0.4s;
-                        transform: scale(1.2);
-                    }
                 }
             }
         }
@@ -176,16 +230,26 @@ body {
 
 
 
-// J S 使 用 セ レ ク タ
+// J S 使 用 セ レ ク タ 
 .visible_mode_1 {
     visibility: visible !important;
     animation: fade_in_1 2s forwards;
 }
 
 .visible_mode_2 {
-    height: auto !important;
+    height: 100svh !important;
     visibility: visible !important;
     animation: fade_in_2 1s forwards;
+}
+
+
+// G o o g l e  F o n t  I c o n
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
 
 
