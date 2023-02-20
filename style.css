@@ -127,34 +127,23 @@ body {
   background: #222;
   visibility: collapse;
   opacity: 0;
-  padding: 0 2em 3em;
-  overflow: hidden;
+  padding: 0 2em;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container .sub_contents_wrap .sub_container {
   max-width: 1920px;
-  margin: 0 auto;
-}
-.container .sub_contents_wrap .sub_container .sub_contents_wrap_header {
-  height: 80px;
   display: flex;
+  justify-content: center;
   align-items: center;
-}
-.container .sub_contents_wrap .sub_container .sub_contents_wrap_header .btn_close {
-  cursor: pointer;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  letter-spacing: 2px;
-  padding: 0 3em;
-}
-.container .sub_contents_wrap .sub_container .sub_contents_wrap_header .btn_close span {
-  color: white;
+  flex-direction: column;
 }
 .container .sub_contents_wrap .sub_container .explanation {
   max-width: 900px;
   min-height: 100px;
-  margin: 3em auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,20 +162,21 @@ body {
   letter-spacing: 2px;
   text-align: center;
 }
-.container .sub_contents_wrap .sub_contents {
+.container .sub_contents_wrap .sub_container .sub_contents {
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 5em auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3em;
+  gap: 2em;
+  flex-wrap: wrap;
 }
-.container .sub_contents_wrap .sub_contents .content {
-  width: 30%;
+.container .sub_contents_wrap .sub_container .sub_contents .content {
+  width: clamp(350px, 100%, 20%);
   aspect-ratio: 4/3;
   overflow: hidden;
 }
-.container .sub_contents_wrap .sub_contents .content video {
+.container .sub_contents_wrap .sub_container .sub_contents .content video {
   border-radius: 2px;
   width: 100%;
   aspect-ratio: 4/3;
@@ -194,8 +184,25 @@ body {
      object-fit: cover;
   transition: 0.4s;
 }
+.container .sub_contents_wrap .sub_container .sub_contents_back {
+  margin: 8em auto;
+  display: flex;
+  align-items: center;
+}
+.container .sub_contents_wrap .sub_container .sub_contents_back .btn_close {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  letter-spacing: 2px;
+  padding: 0 3em;
+}
+.container .sub_contents_wrap .sub_container .sub_contents_back .btn_close span {
+  color: white;
+}
 
-.container::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari 対応 */
 }

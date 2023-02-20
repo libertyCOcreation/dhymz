@@ -142,15 +142,70 @@ body {
         background: #222;
         visibility: collapse;
         opacity: 0;
-        padding: 0 2em 3em;
-        overflow: hidden;
+        padding: 0 2em;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .sub_container {
             max-width: 1920px;
-            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
-            .sub_contents_wrap_header {
-                height: 80px;
+            .explanation {
+                max-width: 900px;
+                min-height: 100px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 2em;
+
+                .big_title {
+                    font-size: 32px;
+                    color: white;
+                    letter-spacing: 2px;
+                    text-align: center;
+                }
+
+                .small_title {
+                    font-size: 16px;
+                    color: white;
+                    letter-spacing: 2px;
+                    text-align: center;
+                }
+            }
+
+            .sub_contents {
+                max-width: 1920px;
+                margin: 5em auto 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;
+                flex-wrap:wrap;
+
+                .content {
+                    width:clamp(350px,100%,20%);
+                    aspect-ratio: 4 / 3;
+                    overflow: hidden;
+
+                    video {
+                        border-radius: 2px;
+                        width: 100%;
+                        aspect-ratio: 4 / 3;
+                        object-fit: cover;
+                        transition: 0.4s;
+                    }
+                }
+            }
+
+            .sub_contents_back {
+                margin: 8em auto;
                 display: flex;
                 align-items: center;
 
@@ -168,62 +223,11 @@ body {
                     }
                 }
             }
-
-            .explanation {
-                max-width:900px;
-                min-height: 100px;
-                margin: 3em auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                gap:2em;
-
-                .big_title {
-                    font-size: 32px;
-                    color: white;
-                    letter-spacing: 2px;
-                    text-align: center;
-                }
-
-                .small_title {
-                    font-size: 16px;
-                    color: white;
-                    letter-spacing: 2px;
-                    text-align: center;
-
-                }
-
-            }
-
-        }
-
-        .sub_contents {
-            max-width: 1920px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3em;
-
-            .content {
-                width: 30%;
-                aspect-ratio: 4 / 3;
-                overflow: hidden;
-
-                video {
-                    border-radius: 2px;
-                    width: 100%;
-                    aspect-ratio: 4 / 3;
-                    object-fit: cover;
-                    transition: 0.4s;
-                }
-            }
         }
     }
 }
 
-.container::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari 対応 */
 }

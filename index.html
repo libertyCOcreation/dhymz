@@ -56,14 +56,6 @@
 
         <div class="sub_contents_wrap">
             <div class="sub_container">
-                <div class="sub_contents_wrap_header">
-                    <div class="btn_close" onclick="content_wrap_visible_2()">
-                        <span class="material-symbols-outlined">
-                            arrow_back
-                        </span>
-                        Back
-                    </div>
-                </div>
                 <div class="explanation">
                     <div class="big_title">
                         VR for Workplace Communication
@@ -78,24 +70,41 @@
                         how a staff member can learn with the VR materials.
                     </div>
                 </div>
-            </div>
 
-            <div class="sub_contents">
-                <div class="content">
-                    <video src="./video/1_1.mp4" controls playsinline></video>
+
+                <div class="sub_contents">
+                    <div class="content">
+                        <video controls muted>
+                            <source src="./video/1_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="content">
+                        <video controls muted>
+                            <source src="./video/1_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="content">
+                        <video controls muted>
+                            <source src="./video/1_3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="content">
+                        <video controls muted>
+                            <source src="./video/1_4.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-                <div class="content">
-                    <img src="image/vr.jpg" alt="subコンテンツ2">
-                </div>
-                <div class="content">
-                    <img src="image/vr.jpg" alt="subコンテンツ3">
+
+                <div class="sub_contents_back">
+                    <div class="btn_close" onclick="content_wrap_visible_2()">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                        </span>
+                        Back
+                    </div>
                 </div>
             </div>
         </div>
-
-        
-    </div>
-
     </div>
 
     <script src="script.js"></script>

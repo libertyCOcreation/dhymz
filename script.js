@@ -9,15 +9,15 @@ window.addEventListener("scroll", () => {
   const sub_contents_wrap = document.querySelector(".sub_contents_wrap");
 
   // scrollTop 0 -> visible_mode を外す
-  if (scroll_value == 0) {
-    console.log("clear!");
-    if (contents_wrap.classList.contains("visible_mode_1")) {
-      content_wrap_visible_1();
-    }
-    if (sub_contents_wrap.classList.contains("visible_mode_2")) {
-      content_wrap_visible_2();
-    }
-  }
+  // if (scroll_value == 0) {
+  //   console.log("clear!");
+  //   if (contents_wrap.classList.contains("visible_mode_1")) {
+  //     content_wrap_visible_1();
+  //   }
+  //   if (sub_contents_wrap.classList.contains("visible_mode_2")) {
+  //     content_wrap_visible_2();
+  //   }
+  // }
 
   // 10px以上スクロール -> visible_mode を付加
   if (scroll_value > 10) {
