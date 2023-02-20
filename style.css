@@ -217,7 +217,7 @@ body::-webkit-scrollbar {
 
 .visible_mode_1 {
   visibility: visible !important;
-  animation: fade_in_1 2s forwards;
+  animation: fade_in_1 3s forwards;
 }
 
 .visible_mode_2 {

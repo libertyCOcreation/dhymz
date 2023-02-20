@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
   // }
 
   // 10px以上スクロール -> visible_mode を付加
-  if (scroll_value > 10) {
+  if (scroll_value > 200) {
     console.log("fire!");
     // すでに付加済みの場合はスキップ
     if (contents_wrap.classList.contains("visible_mode_1")) {

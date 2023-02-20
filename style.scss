@@ -247,7 +247,7 @@ body::-webkit-scrollbar {
 // J S 使 用 セ レ ク タ 
 .visible_mode_1 {
     visibility: visible !important;
-    animation: fade_in_1 2s forwards;
+    animation: fade_in_1 3s forwards;
 }
 
 .visible_mode_2 {
@@ -307,7 +307,6 @@ body::-webkit-scrollbar {
         opacity: 0;
         transform: translateY(50px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0px);
@@ -318,7 +317,6 @@ body::-webkit-scrollbar {
     0% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
