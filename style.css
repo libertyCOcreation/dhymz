@@ -160,7 +160,7 @@ body {
 }
 
 .visible_mode_2 {
-  height: 100svh !important;
+  height: auto !important;
   visibility: visible !important;
   animation: fade_in_2 1s forwards;
 }
