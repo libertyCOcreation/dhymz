@@ -284,6 +284,30 @@ body::-webkit-scrollbar {
         width: 100%;
       }
     }
+    .sub_contents_wrap {
+      .sub_container {
+        .explanation {
+          .big_title {
+            font-size: 24px;
+          }
+          .small_title {
+            font-size: 16px;
+          }
+        }
+        .sub_contents {
+          .content {
+            width: 100%;
+            margin-bottom: 2em;
+            .video_explanation {
+              font-size: 14px;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
