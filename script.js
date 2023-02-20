@@ -34,7 +34,7 @@ window.addEventListener("scroll", () => {
 // contentsにある３つの画像の表示/非表示
 function content_wrap_visible_1() {
   const contents_wrap = document.querySelector(".contents_wrap");
-    contents_wrap.classList.toggle("visible_mode_1");
+  contents_wrap.classList.toggle("visible_mode_1");
 }
 // sub_contentsの表示/非表示
 function content_wrap_visible_2() {

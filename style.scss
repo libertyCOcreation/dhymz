@@ -13,6 +13,7 @@ body {
 .container {
     width: 100%;
     background: #222;
+    position: relative;
 
     //  comp_01 / TOP
     .top_bg_wrap {
@@ -74,36 +75,38 @@ body {
                 letter-spacing: 3px;
                 display: grid;
                 place-items: center;
+                text-align: center;
             }
         }
     }
 
     //  comp_02 / content parents
     .contents_wrap {
-        margin:0 auto;
+        margin: 0 auto;
         padding: 10em 2em 3em;
-        max-width:1920px;
+        max-width: 1920px;
         visibility: collapse;
         opacity: 0;
         display: flex;
         justify-content: center;
-        gap: 2em;
+        gap: 3em;
 
         .content {
-            width: 30%;
+            width: 25%;
 
             .img_wrap {
-                width:100%;
-                max-width:700px;
-                aspect-ratio: 1 / 1;
+                width: 100%;
+                max-width: 900px;
+                aspect-ratio: 16 / 9;
+                border-radius: 6px;
                 overflow: hidden;
-                cursor:pointer;
+                cursor: pointer;
 
                 img {
                     border-radius: 2px;
                     width: 100%;
-                    max-width:700px;
-                    aspect-ratio: 1 / 1;
+                    max-width: 900px;
+                    aspect-ratio: 16 / 9;
                     object-fit: cover;
                     transition: 0.4s;
 
@@ -115,12 +118,13 @@ body {
             }
 
             .explanation {
-                margin-top: 1em;
+                margin-top: 2em;
                 color: whitesmoke;
                 font-size: 14px;
                 letter-spacing: 3px;
                 display: grid;
                 place-items: center;
+                text-align: center;
             }
         }
     }
@@ -143,13 +147,13 @@ body {
 
             .content {
                 width: 30%;
-                aspect-ratio: 1 / 1;
+                aspect-ratio: 4 / 3;
                 overflow: hidden;
 
                 img {
                     border-radius: 2px;
                     width: 100%;
-                    aspect-ratio: 1 / 1;
+                    aspect-ratio: 4 / 3;
                     object-fit: cover;
                     transition: 0.4s;
 
@@ -180,7 +184,7 @@ body {
 // J S 使 用 セ レ ク タ
 .visible_mode_1 {
     visibility: visible !important;
-    animation: fade_in_1 3s forwards;
+    animation: fade_in_1 2s forwards;
 }
 
 .visible_mode_2 {
