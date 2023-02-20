@@ -130,21 +130,14 @@ body {
   opacity: 0;
   padding: 0 2em;
   overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .container .sub_contents_wrap .sub_container {
   max-width: 1920px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .container .sub_contents_wrap .sub_container .explanation {
   max-width: 900px;
   min-height: 100px;
-  margin: 0 auto;
+  margin: 3em auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,6 +188,7 @@ body {
 .container .sub_contents_wrap .sub_container .sub_contents_back {
   margin: 8em auto 2em;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .container .sub_contents_wrap .sub_container .sub_contents_back .btn_close {
