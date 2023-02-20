@@ -140,6 +140,7 @@ body {
         width: 100%;
         height: 0;
         background: #222;
+        color: white;
         visibility: collapse;
         opacity: 0;
         padding: 0 2em;
@@ -177,20 +178,21 @@ body {
                     color: white;
                     letter-spacing: 2px;
                     text-align: center;
+                    margin-bottom: 5em;
                 }
             }
 
             .sub_contents {
                 max-width: 1920px;
-                margin: 5em auto 0;
+                margin: 2em auto 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 2em;
-                flex-wrap:wrap;
+                flex-wrap: wrap;
 
                 .content {
-                    width:clamp(350px,100%,20%);
+                    width: clamp(350px, 100%, 20%);
                     aspect-ratio: 4 / 3;
                     overflow: hidden;
 
@@ -205,7 +207,7 @@ body {
             }
 
             .sub_contents_back {
-                margin: 8em auto;
+                margin: 8em auto 2em;
                 display: flex;
                 align-items: center;
 
@@ -241,7 +243,7 @@ body::-webkit-scrollbar {
 }
 
 .visible_mode_2 {
-    height: 100svh !important;
+    min-height: 100svh !important;
     visibility: visible !important;
     animation: fade_in_2 1s forwards;
 }
@@ -292,7 +294,6 @@ body::-webkit-scrollbar {
 
 
 // a n i m a t i on
-
 @keyframes fade_in_1 {
     0% {
         opacity: 0;
