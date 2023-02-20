@@ -130,21 +130,14 @@ body {
   opacity: 0;
   padding: 0 2em;
   overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .container .sub_contents_wrap .sub_container {
   max-width: 1920px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .container .sub_contents_wrap .sub_container .explanation {
   max-width: 900px;
   min-height: 100px;
-  margin: 0 auto;
+  margin: 3em auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,10 +166,10 @@ body {
   flex-wrap: wrap;
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content {
-  width: clamp(350px, 100%, 20%);
+  width: clamp(300px, 100%, 20%);
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content video {
-  width: clamp(350px, 100%, 20%);
+  width: clamp(300px, 100%, 20%);
   border-radius: 2px;
   width: 100%;
   aspect-ratio: 4/3;
@@ -195,6 +188,7 @@ body {
 .container .sub_contents_wrap .sub_container .sub_contents_back {
   margin: 8em auto 2em;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .container .sub_contents_wrap .sub_container .sub_contents_back .btn_close {
@@ -221,7 +215,7 @@ body::-webkit-scrollbar {
 }
 
 .visible_mode_2 {
-  min-height: 100svh !important;
+  min-height: 100vh !important;
   visibility: visible !important;
   animation: fade_in_2 1s forwards;
 }
@@ -248,6 +242,22 @@ body::-webkit-scrollbar {
   }
   .container .contents .content_wrap {
     width: 100%;
+  }
+  .container .sub_contents_wrap .sub_container .explanation .big_title {
+    font-size: 24px;
+  }
+  .container .sub_contents_wrap .sub_container .explanation .small_title {
+    font-size: 16px;
+  }
+  .container .sub_contents_wrap .sub_container .sub_contents .content {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .container .sub_contents_wrap .sub_container .sub_contents .content .video_explanation {
+    font-size: 14px;
+  }
+  .container .sub_contents_wrap .sub_container .sub_contents .content:last-child {
+    margin-bottom: 0;
   }
 }
 @keyframes fade_in_1 {
