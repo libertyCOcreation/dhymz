@@ -169,22 +169,28 @@ body {
   margin: 2em auto 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 2em;
   flex-wrap: wrap;
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content {
   width: clamp(350px, 100%, 20%);
-  aspect-ratio: 4/3;
-  overflow: hidden;
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content video {
+  width: clamp(350px, 100%, 20%);
   border-radius: 2px;
   width: 100%;
   aspect-ratio: 4/3;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.4s;
+}
+.container .sub_contents_wrap .sub_container .sub_contents .content .video_explanation {
+  margin-top: 2em;
+  color: whitesmoke;
+  font-size: 14px;
+  letter-spacing: 3px;
+  display: grid;
+  place-items: center;
 }
 .container .sub_contents_wrap .sub_container .sub_contents_back {
   margin: 8em auto 2em;
