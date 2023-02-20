@@ -2,6 +2,9 @@
   box-sizing: border-box;
   font-size: 14px;
 }
+hr{
+  border:1px solid gray;
+}
 
 body {
   margin: 0;
@@ -150,6 +153,7 @@ body {
 
     .sub_container {
       max-width: 1920px;
+      margin: 0 auto;
 
       .explanation {
         max-width: 900px;
@@ -188,6 +192,7 @@ body {
 
         .content {
           width: clamp(300px, 100%, 20%);
+
           video {
             width: clamp(300px, 100%, 20%);
             border-radius: 2px;
@@ -206,6 +211,33 @@ body {
             place-items: center;
             // text-align: center;
           }
+        }
+      }
+
+      .thesis {
+        max-width: 1200px;
+        margin: 4em auto 0;
+
+        .big_title {
+          font-size: 16px;
+          color: gray;
+          letter-spacing: 2px;
+          // margin-bottom: 1em;
+        }
+
+        .small_title {
+          font-size: 12px;
+          color: gray;
+          letter-spacing: 2px;
+        }
+      }
+
+      .bottom_explanation{
+        max-width: 1200px;
+        margin: 4em auto 0;
+        OBJECT{
+          background:none;
+
         }
       }
 
@@ -233,10 +265,18 @@ body {
   }
 }
 
+
+// Scroll bar を表示しない
 body::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari 対応 */
 }
+
+.sub_contents_wrap::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari 対応 */
+}
+
 
 // J S 使 用 セ レ ク タ
 .visible_mode_1 {
@@ -250,14 +290,17 @@ body::-webkit-scrollbar {
   animation: fade_in_2 1s forwards;
 }
 
+
 // G o o g l e  F o n t  I c o n
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
+
 // S P 対 応
 @media (width <=600px) {
   .container {
+
     //  comp_01
     .top_bg_wrap {
       .title {
@@ -284,23 +327,28 @@ body::-webkit-scrollbar {
         width: 100%;
       }
     }
+
     .sub_contents_wrap {
       .sub_container {
         .explanation {
           .big_title {
             font-size: 24px;
           }
+
           .small_title {
             font-size: 16px;
           }
         }
+
         .sub_contents {
           .content {
             width: 100%;
             margin-bottom: 2em;
+
             .video_explanation {
               font-size: 14px;
             }
+
             &:last-child {
               margin-bottom: 0;
             }
@@ -311,12 +359,14 @@ body::-webkit-scrollbar {
   }
 }
 
+
 // a n i m a t i on
 @keyframes fade_in_1 {
   0% {
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0px);
@@ -327,6 +377,7 @@ body::-webkit-scrollbar {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
