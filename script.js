@@ -31,26 +31,29 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// contentsにある３つの画像の表示/非表示
+
+// contentsの画像の表示/非表示
 function content_wrap_visible_1() {
   const contents_wrap = document.querySelector(".contents_wrap");
   contents_wrap.classList.toggle("visible_mode_1");
 }
-// sub_contentsの表示/非表示
+// sub_contentsを非表示
 function content_wrap_visible_2() {
-  const sub_contents_wrap = document.querySelector(".sub_contents_wrap");
-  sub_contents_wrap.classList.toggle("visible_mode_2");
+  const sub_contents_wraps = document.querySelectorAll(".sub_contents_wrap");
+  for (let i = 0; i < sub_contents_wraps.length; i++) {
+    sub_contents_wraps[i].classList.remove("visible_mode_2");
+  }
 }
 
 
 // s u b _ c o n t e n t s
-// 
+// parent-imageをクリックしたら、該当のsub_contentを表示
 function open_subcontentent(open_no) {
-  const sub_contents_wrap = document.querySelector(".sub_contents_wrap");
-  sub_contents_wrap.classList.remove("visible_mode_2");
-  sub_contents_wrap.classList.add("visible_mode_2");
   console.log(`choice no:${open_no}`);
 
-  // const sub_contents = document.querySelectorAll("sub_contents");
-  // sub_contents[open_no].classList.add("choice");
+  content_wrap_visible_2();
+
+  const sub_contents_wraps = document.querySelectorAll(".sub_contents_wrap");
+  sub_contents_wraps[open_no].classList.add("visible_mode_2");
+
 }
