@@ -166,10 +166,10 @@ body {
   flex-wrap: wrap;
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content {
-  width: clamp(350px, 100%, 20%);
+  width: clamp(300px, 100%, 20%);
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content video {
-  width: clamp(350px, 100%, 20%);
+  width: clamp(300px, 100%, 20%);
   border-radius: 2px;
   width: 100%;
   aspect-ratio: 4/3;
