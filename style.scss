@@ -235,9 +235,22 @@ body {
       .bottom_explanation{
         max-width: 1200px;
         margin: 4em auto 0;
-        OBJECT{
-          background:none;
+        letter-spacing: 2px;
+        line-height:1.6;
+        white-space: pre-wrap;
+        color: lightgray;
+      }
 
+      .page_link{
+        max-width: 1200px;
+        margin: 2em auto 0;
+        a{
+          text-decoration: none;
+          color: white;
+          &:hover{
+            transition: 1s;
+          color: yellow;
+          }
         }
       }
 
