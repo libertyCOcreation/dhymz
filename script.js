@@ -55,8 +55,5 @@ function open_subcontentent(open_no) {
 
   const sub_contents_wraps = document.querySelectorAll(".sub_contents_wrap");
   sub_contents_wraps[open_no].classList.add("visible_mode_2");
-
-
-  const sub_contents_wrap = document.querySelector(".sub_contents_wrap");
-  sub_contents_wrap.scrollTo(0, 0);
+  sub_contents_wrap[open_no].scrollTo(0, 0);
 }

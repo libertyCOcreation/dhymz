@@ -254,6 +254,11 @@ body::-webkit-scrollbar {
   /* Chrome, Safari 対応 */
 }
 
+.container::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari 対応 */
+}
+
 .sub_contents_wrap::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari 対応 */
@@ -335,7 +340,7 @@ body::-webkit-scrollbar {
     white-space: nowrap;
   }
   .container .sub_contents_wrap .sub_container .sub_contents_back {
-    margin: 4em auto 2em;
+    margin: 4em auto;
   }
 }
 @keyframes fade_in_1 {
