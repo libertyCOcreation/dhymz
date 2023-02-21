@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   // font-family: 'M PLUS 1p', sans-serif;
   // font-family: 'Noto Sans JP', sans-serif;
 }
@@ -20,7 +20,7 @@ body {
 .container {
   width: 100%;
   overflow: auto;
-  background: #222;
+  background: #111;
   position: relative;
 
   //  0. TOP TITLE
@@ -28,6 +28,7 @@ body {
     position: relative;
     overflow: hidden;
 
+    // どちらか選択（静止画）
     .bcimg {
       width: 100%;
       height: 100svh;
@@ -47,23 +48,45 @@ body {
         left: 0;
         width: 100%;
         height: 100svh;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    // どちらか選択（動画）
+    video {
+      min-width: 100%;
+      min-height: 100svh;
+      filter: brightness(30%);
+      position: relative;
+      z-index: 2;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100svh;
+        background-color: rgba(0, 0, 0, 0.6);
       }
     }
 
     .title {
       width: 100%;
       height: 100svh;
-      padding: 2em;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 4;
+      padding: 2em;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       color: whitesmoke;
+      text-shadow: 0 4px 40px white;
+      overflow: hidden;
 
       .title_large {
         font-size: 12em;
@@ -107,7 +130,8 @@ body {
         max-width: 900px;
         aspect-ratio: 3 / 4;
         // border-radius: 6px;
-        box-shadow: rgba(0, 0, 0, 1) 0px 14px 28px, rgba(0, 0, 0, 0.6) 0px 10px 10px;
+        box-shadow: rgba(0, 0, 0, 1) 0px 14px 28px,
+          rgba(0, 0, 0, 0.6) 0px 10px 10px;
         overflow: hidden;
         cursor: pointer;
 
@@ -146,7 +170,7 @@ body {
     z-index: 999;
     width: 100%;
     height: 0;
-    background: #222;
+    background: #111;
     color: white;
     visibility: collapse;
     opacity: 0;
@@ -200,7 +224,8 @@ body {
 
           video {
             width: clamp(300px, 100%, 20%);
-            box-shadow: rgba(0, 0, 0, 1) 0px 14px 28px, rgba(0, 0, 0, 0.6) 0px 10px 10px;
+            box-shadow: rgba(0, 0, 0, 1) 0px 14px 28px,
+              rgba(0, 0, 0, 0.6) 0px 10px 10px;
             border-radius: 2px;
             width: 100%;
             aspect-ratio: 4 / 3;
@@ -292,7 +317,6 @@ body {
   }
 }
 
-
 // Scroll bar を表示しない
 body::-webkit-scrollbar {
   display: none;
@@ -309,7 +333,6 @@ body::-webkit-scrollbar {
   /* Chrome, Safari 対応 */
 }
 
-
 // J S 使 用 セ レ ク タ
 .visible_mode_1 {
   visibility: visible !important;
@@ -322,17 +345,14 @@ body::-webkit-scrollbar {
   animation: fade_in_2 1s forwards;
 }
 
-
 // G o o g l e  F o n t  I c o n
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-
 // S P 対 応
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .container {
-
     //  comp_01
     .top_bg_wrap {
       .title {
@@ -364,7 +384,6 @@ body::-webkit-scrollbar {
 
         .img_wrap {
           aspect-ratio: 16 / 9;
-
         }
 
         .explanation {
@@ -425,8 +444,16 @@ body::-webkit-scrollbar {
   }
 }
 
-
 // a n i m a t i on
+@keyframes fade_in_title {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
 @keyframes fade_in_1 {
   0% {
     opacity: 0;
