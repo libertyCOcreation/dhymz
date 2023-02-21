@@ -37,12 +37,13 @@ function content_wrap_visible_1() {
   contents_wrap.classList.toggle("visible_mode_1");
 }
 
-// sub_contentsを非表示
+// Backボタンで sub_contentsを非表示
 function content_wrap_visible_2() {
   const sub_contents_wraps = document.querySelectorAll(".sub_contents_wrap");
   for (let i = 0; i < sub_contents_wraps.length; i++) {
     sub_contents_wraps[i].classList.remove("visible_mode_2");
   }
+  
 }
 
 
@@ -55,5 +56,5 @@ function open_subcontentent(open_no) {
 
   const sub_contents_wraps = document.querySelectorAll(".sub_contents_wrap");
   sub_contents_wraps[open_no].classList.add("visible_mode_2");
-  sub_contents_wrap[open_no].scrollTo(0, 0);
+  sub_contents_wraps[open_no].scrollTo(0, 0);
 }
