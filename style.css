@@ -94,8 +94,7 @@ body {
 .container .contents_wrap .content .img_wrap {
   width: 100%;
   max-width: 900px;
-  aspect-ratio: 16/9;
-  border-radius: 6px;
+  aspect-ratio: 3/4;
   overflow: hidden;
   cursor: pointer;
 }
@@ -103,7 +102,7 @@ body {
   border-radius: 2px;
   width: 100%;
   max-width: 900px;
-  aspect-ratio: 16/9;
+  aspect-ratio: 3/4;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.4s;
@@ -181,6 +180,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.4s;
+  cursor: pointer;
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content .video_explanation {
   margin-top: 2em;
@@ -229,18 +229,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 14px;
+  border-radius: 50px;
+  background: #444;
+  color: white;
 }
 .container .sub_contents_wrap .sub_container .sub_contents_back .btn_close {
   cursor: pointer;
-  color: white;
   display: flex;
   align-items: center;
   gap: 1em;
   letter-spacing: 2px;
-  padding: 0 3em;
 }
-.container .sub_contents_wrap .sub_container .sub_contents_back .btn_close span {
-  color: white;
+.container .sub_contents_wrap .sub_container .sub_contents_back:hover {
+  transition: 0.4s;
+  background: silver;
+  color: black;
 }
 
 body::-webkit-scrollbar {
@@ -279,19 +285,36 @@ body::-webkit-scrollbar {
   .container .top_bg_wrap .title .title_smoll {
     font-size: 1em;
     letter-spacing: 2px;
+    margin-top: -2em;
+    text-align: center;
   }
-  .container .contents {
-    padding: 5em 0;
-    flex-wrap: wrap;
-  }
-  .container .contents .content_wrap {
+  .container .contents_wrap {
+    padding: 3em 0 6em;
     width: 100%;
+    display: block;
+  }
+  .container .contents_wrap .content {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  .container .contents_wrap .content .img_wrap {
+    aspect-ratio: 16/9;
+  }
+  .container .contents_wrap .content .explanation {
+    margin-top: 1em;
+  }
+  .container .contents_wrap .content:last-child {
+    margin-bottom: 0px;
+  }
+  .container .sub_contents_wrap {
+    padding: 0 1em;
   }
   .container .sub_contents_wrap .sub_container .explanation .big_title {
     font-size: 24px;
   }
   .container .sub_contents_wrap .sub_container .explanation .small_title {
     font-size: 16px;
+    margin-bottom: 3em;
   }
   .container .sub_contents_wrap .sub_container .sub_contents .content {
     width: 100%;
@@ -299,9 +322,20 @@ body::-webkit-scrollbar {
   }
   .container .sub_contents_wrap .sub_container .sub_contents .content .video_explanation {
     font-size: 14px;
+    margin-top: 1em;
+    text-align: center;
   }
   .container .sub_contents_wrap .sub_container .sub_contents .content:last-child {
     margin-bottom: 0;
+  }
+  .container .sub_contents_wrap .sub_container .page_link {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .container .sub_contents_wrap .sub_container .sub_contents_back {
+    margin: 4em auto 2em;
   }
 }
 @keyframes fade_in_1 {
