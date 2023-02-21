@@ -23,7 +23,7 @@ body {
   background: #222;
   position: relative;
 
-  //  comp_01 / TOP
+  //  0. TOP TITLE
   .top_bg_wrap {
     position: relative;
     overflow: hidden;
@@ -88,7 +88,7 @@ body {
     }
   }
 
-  //  comp_02 / content parents
+  //  1. TOP SELECT
   .contents_wrap {
     margin: 0 auto;
     padding: 10em 2em;
@@ -107,6 +107,7 @@ body {
         max-width: 900px;
         aspect-ratio: 3 / 4;
         // border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 1) 0px 14px 28px, rgba(0, 0, 0, 0.6) 0px 10px 10px;
         overflow: hidden;
         cursor: pointer;
 
@@ -137,7 +138,7 @@ body {
     }
   }
 
-  //  comp_03 / content childs
+  //  S U B - C O  N T E N T
   .sub_contents_wrap {
     position: fixed;
     top: 0;
@@ -199,6 +200,7 @@ body {
 
           video {
             width: clamp(300px, 100%, 20%);
+            box-shadow: rgba(0, 0, 0, 1) 0px 14px 28px, rgba(0, 0, 0, 0.6) 0px 10px 10px;
             border-radius: 2px;
             width: 100%;
             aspect-ratio: 4 / 3;

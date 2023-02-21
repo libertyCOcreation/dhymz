@@ -96,6 +96,7 @@ body {
   width: 100%;
   max-width: 900px;
   aspect-ratio: 3/4;
+  box-shadow: rgb(0, 0, 0) 0px 14px 28px, rgba(0, 0, 0, 0.6) 0px 10px 10px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -175,6 +176,7 @@ body {
 }
 .container .sub_contents_wrap .sub_container .sub_contents .content video {
   width: clamp(300px, 100%, 20%);
+  box-shadow: rgb(0, 0, 0) 0px 14px 28px, rgba(0, 0, 0, 0.6) 0px 10px 10px;
   border-radius: 2px;
   width: 100%;
   aspect-ratio: 4/3;
