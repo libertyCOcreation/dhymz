@@ -23,8 +23,10 @@ body {
   position: relative;
 }
 .container .top_bg_wrap {
-  position: relative;
+  width: 100%;
+  height: 100svh;
   overflow: hidden;
+  position: relative;
 }
 .container .top_bg_wrap .bcimg {
   width: 100%;
@@ -49,20 +51,12 @@ body {
 }
 .container .top_bg_wrap video {
   min-width: 100%;
-  min-height: 100svh;
+  max-height: 100svh;
+  -o-object-fit: cover;
+     object-fit: cover;
   filter: brightness(30%);
   position: relative;
   z-index: 2;
-}
-.container .top_bg_wrap video:before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100svh;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 .container .top_bg_wrap .title {
   width: 100%;
@@ -127,10 +121,12 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.4s;
+  filter: brightness(80%);
 }
 .container .contents_wrap .content .img_wrap img:hover {
   transition: 0.4s;
   transform: scale(1.2);
+  filter: brightness(200%);
 }
 .container .contents_wrap .content .explanation {
   margin-top: 2em;
@@ -218,12 +214,12 @@ body {
 }
 .container .sub_contents_wrap .sub_container .thesis .big_title {
   font-size: 16px;
-  color: gray;
+  color: lightgoldenrodyellow;
   letter-spacing: 2px;
 }
 .container .sub_contents_wrap .sub_container .thesis .small_title {
   font-size: 12px;
-  color: gray;
+  color: lightgray;
   letter-spacing: 2px;
 }
 .container .sub_contents_wrap .sub_container .bottom_explanation {
@@ -261,7 +257,7 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
   letter-spacing: 2px;
 }
 .container .sub_contents_wrap .sub_container .sub_contents_back:hover {
