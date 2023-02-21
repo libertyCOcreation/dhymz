@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   font-size: 14px;
+  font-family: "Open Sans", sans-serif;
 }
 
 hr {
@@ -279,7 +280,7 @@ body::-webkit-scrollbar {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .container .top_bg_wrap .title {
     gap: 1rem;
   }
