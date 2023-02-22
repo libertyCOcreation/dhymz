@@ -73,6 +73,7 @@ body {
   color: whitesmoke;
   text-shadow: 0 4px 40px white;
   overflow: hidden;
+  animation: fade_in_title 2s forwards;
 }
 .container .top_bg_wrap .title .title_large {
   font-size: 12em;
@@ -362,10 +363,15 @@ body::-webkit-scrollbar {
 }
 @keyframes fade_in_title {
   0% {
-    transform: translateY(-50px);
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  90% {
+    opacity: 0.5;
   }
   100% {
-    transform: translateY(0px);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes fade_in_1 {
