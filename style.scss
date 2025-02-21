@@ -100,7 +100,6 @@ body {
         display: grid;
         place-items: center;
         text-align: center;
-        word-break: break-all;
       }
     }
   }
@@ -200,7 +199,6 @@ body {
           letter-spacing: 2px;
           text-align: center;
           margin-bottom: 5em;
-          word-break: break-all;
         }
       }
 
@@ -260,9 +258,8 @@ body {
         margin: 4em auto 0;
         letter-spacing: 2px;
         line-height: 1.6;
-        // white-space: pre-wrap;
+        white-space: pre-wrap;
         color: lightgray;
-        word-break: break-all;
       }
 
       .page_link {
