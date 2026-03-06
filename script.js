@@ -1,3 +1,8 @@
+// script.js の先頭に追加
+document.querySelectorAll("img").forEach((img) => {
+  img.src = img.src + "?v=20260306";
+});
+
 // c o n t e n t s
 // contents_wrap が viewport に入ったら fade in
 window.addEventListener("scroll", () => {
