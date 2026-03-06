@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=20250221">
+    <link rel="stylesheet" href="style.css?v=20260306">
     <link rel="icon" href="image/icon-32x32.png" sizes="any">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet"
@@ -20,11 +20,9 @@
 
         <!-- 0. TOP TITLE -->
         <div class="top_bg_wrap">
-            <!-- <div class="bcimg"></div> -->
             <video muted autoplay loop playsinline>
                 <source src="./video/1_1_1.mp4" type="video/mp4">
             </video>
-            
             <div class="title">
                 <div class="title_large">VR</div>
                 <div class="title_smoll">for Communication Enhancement</div>
@@ -38,32 +36,34 @@
         <!-- 1. TOP SELECT -->
         <div class="contents_wrap">
             <div class="content">
-                <div class="img_wrap" onclick="open_subcontentent(0)">
-                    <img src="image/main_1.jpg" alt="コンテンツ1">
+                <div class="img_wrap" onclick="open_subcontent(0)">
+                    <img src="image/main_1.jpg" alt="VR for Workplace Communication">
                 </div>
                 <div class="explanation">
                     VR for Workplace Communication
                 </div>
             </div>
-            <div class="content" onclick="open_subcontentent(1)">
+            <div class="content" onclick="open_subcontent(1)">
                 <div class="img_wrap">
-                    <img src="image/main_2.jpg" alt="コンテンツ2">
+                    <img src="image/main_2.jpg" alt="VR for Academic Communication">
                 </div>
                 <div class="explanation">
                     VR for Academic Communication
                 </div>
             </div>
-            <div class="content" onclick="open_subcontentent(2)">
+            <!-- カード3：Tourism（画像・テキスト変更） -->
+            <div class="content" onclick="open_subcontent(2)">
                 <div class="img_wrap">
-                    <img src="image/main_3.jpg" alt="コンテンツ3">
+                    <!-- TODO: image/main_tourism.jpg に差し替え -->
+                    <img src="image/tourism.png" alt="Innovative Applications of Digital Technologies for Tourism">
                 </div>
                 <div class="explanation">
-                    VR for Communication and Well-being of the Elderly
+                    Innovative Applications of Digital Technologies for Tourism
                 </div>
             </div>
         </div>
 
-        <!-- 1. VR for Workplace Communication -->
+        <!-- SUB PAGE 1. VR for Workplace Communication -->
         <div class="sub_contents_wrap">
             <div class="sub_container">
                 <div class="explanation">
@@ -72,12 +72,9 @@
                     </div>
                     <div class="small_title">
                         VR Communication Training Materials for workplace communication are designed to enhance the
-                        English
-                        communication skills of Japanese staff working in a hotel. They consist of training exercises
-                        for
-                        English conversations at a hotel front desk and a restaurant in a hotel. The following videos
-                        show
-                        how a staff member can learn with the VR materials.
+                        English communication skills of Japanese staff working in a hotel. They consist of training
+                        exercises for English conversations at a hotel front desk and a restaurant in a hotel. The
+                        following videos show how a staff member can learn with the VR materials.
                     </div>
                     <div class="big_title">
                         At the Hotel Front Desk
@@ -86,8 +83,7 @@
 
                 <div class="sub_contents">
                     <div class="content">
-                        <!-- <video controls muted autoplay loop playsinline"> -->
-                            <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/1_1_1.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
@@ -96,7 +92,7 @@
                         </div>
                     </div>
                     <div class="content">
-                        <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/1_2_1.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
@@ -104,7 +100,7 @@
                         </div>
                     </div>
                     <div class="content">
-                        <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/1_3_1.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
@@ -112,7 +108,7 @@
                         </div>
                     </div>
                     <div class="content">
-                        <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/1_4_1.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
@@ -128,25 +124,28 @@
                     </div>
                     <hr>
                     <div class="small_title">
-                        Kazumine Takada, Kayoko H. Murakami, Atsuko K. Yamazaki, Tsukasa Yamanaka: "A preliminary study of VR English training material for personnel in the tourism industry"　to appear in the Proceedings of 26th International Conference on Knowledge-Based and Intelligent Information & Engineering Systems（2022）. <br>
-                        山崎敦子, 山中司, 村上嘉代子, ADILIN ANUARDI: コミュニケーション教育におけるVR教材の効果的活用に向けて, DHU JOURNAL Vol. 9, pp.15-17, 2022<br>
-                        山崎敦子, 村上嘉代子, 山中司: 英語コミュニケーション能力向上のためのVRトレーニング教材開発の試みテクニカルコミュニケーション・リデザイン学術研究会発表論文集, 第6号2024年10月<br>
-                        山崎敦子, 村上嘉代子, 山中司, 長谷川浩志: 理工系英語プレゼンテーションVR教材の開発と評価方法, 日本工学教育協会2024年度工学教育研究講演会論文集, 36-37, 2024年9月                        
+                        Kazumine Takada, Kayoko H. Murakami, Atsuko K. Yamazaki, Tsukasa Yamanaka: "A preliminary study
+                        of VR English training material for personnel in the tourism industry" to appear in the
+                        Proceedings of 26th International Conference on Knowledge-Based and Intelligent Information &
+                        Engineering Systems（2022）.<br>
+                        山崎敦子, 山中司, 村上嘉代子, ADILIN ANUARDI: コミュニケーション教育におけるVR教材の効果的活用に向けて, DHU JOURNAL Vol. 9, pp.15-17,
+                        2022<br>
+                        山崎敦子, 村上嘉代子, 山中司: 英語コミュニケーション能力向上のためのVRトレーニング教材開発の試みテクニカルコミュニケーション・リデザイン学術研究会発表論文集,
+                        第6号2024年10月<br>
+                        山崎敦子, 村上嘉代子, 山中司, 長谷川浩志: 理工系英語プレゼンテーションVR教材の開発と評価方法, 日本工学教育協会2024年度工学教育研究講演会論文集, 36-37, 2024年9月
                     </div>
                 </div>
 
                 <div class="sub_contents_back">
-                    <div class="btn_close" onclick="content_wrap_visible_2()">
-                        <span class="material-symbols-outlined">
-                            arrow_back
-                        </span>
+                    <div class="btn_close" onclick="close_all_subcontents()">
+                        <span class="material-symbols-outlined">arrow_back</span>
                         Back
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 2. VR for Academic Communication -->
+        <!-- SUB PAGE 2. VR for Academic Communication -->
         <div class="sub_contents_wrap">
             <div class="sub_container">
                 <div class="explanation">
@@ -160,13 +159,11 @@
                         international conference by simulating the typical situations in the Q&A session of a research
                         presentation. The following videos show how a student can learn with the VR materials.
                     </div>
-                    <div class="big_title">
-                    </div>
                 </div>
 
                 <div class="sub_contents">
                     <div class="content">
-                        <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/2_1.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
@@ -174,7 +171,7 @@
                         </div>
                     </div>
                     <div class="content">
-                        <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/2_2.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
@@ -182,19 +179,21 @@
                         </div>
                     </div>
                     <div class="content">
-                        <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/2_3.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
-                            3. Responding to a question about the method: Model answers displayed, Pronunciation & fluency analysis
+                            3. Responding to a question about the method: Model answers displayed, Pronunciation &amp;
+                            fluency analysis
                         </div>
                     </div>
                     <div class="content">
-                        <video controls muted loop playsinline">
+                        <video controls muted loop playsinline>
                             <source src="./video/2_4.mp4" type="video/mp4">
                         </video>
                         <div class="video_explanation">
-                            4. Responding to a question about the method: No model answers displayed, Pronunciation & fluency analysis
+                            4. Responding to a question about the method: No model answers displayed, Pronunciation
+                            &amp; fluency analysis
                         </div>
                     </div>
                 </div>
@@ -205,15 +204,20 @@
                     </div>
                     <hr>
                     <div class="small_title">
-                        Taishi Akimoto, Kayoko H. Murakami, Atsuko K. Yamazaki, Tsukasa Yamanaka, Hiroshi Hasegawa: "A Preliminary Cyber-Physical Study of a VR Training Material for Engineering Students to Give a Presentation in English" To appear in the Proceedings of 26th International Conference on Knowledge-Based and Intelligent Information & Engineering Systems（2022）. <br>
-                        山崎敦子, 山中司, 村上嘉代子, ADILIN ANUARDI: コミュニケーション教育におけるVR教材の効果的活用に向けて, DHU JOURNAL Vol. 9, pp.15-17, 2022<br>
-                        山崎敦子, 村上嘉代子, 山中司: 英語コミュニケーション能力向上のためのVRトレーニング教材開発の試みテクニカルコミュニケーション・リデザイン学術研究会発表論文集, 第6号2024年10月<br>
+                        Taishi Akimoto, Kayoko H. Murakami, Atsuko K. Yamazaki, Tsukasa Yamanaka, Hiroshi Hasegawa: "A
+                        Preliminary Cyber-Physical Study of a VR Training Material for Engineering Students to Give a
+                        Presentation in English" To appear in the Proceedings of 26th International Conference on
+                        Knowledge-Based and Intelligent Information & Engineering Systems（2022）.<br>
+                        山崎敦子, 山中司, 村上嘉代子, ADILIN ANUARDI: コミュニケーション教育におけるVR教材の効果的活用に向けて, DHU JOURNAL Vol. 9, pp.15-17,
+                        2022<br>
+                        山崎敦子, 村上嘉代子, 山中司: 英語コミュニケーション能力向上のためのVRトレーニング教材開発の試みテクニカルコミュニケーション・リデザイン学術研究会発表論文集,
+                        第6号2024年10月<br>
                         山崎敦子, 村上嘉代子, 山中司, 長谷川浩志: 理工系英語プレゼンテーションVR教材の開発と評価方法, 日本工学教育協会2024年度工学教育研究講演会論文集, 36-37, 2024年9月
                     </div>
                 </div>
 
                 <pre class="bottom_explanation">
-In the workplace, companies may be wondering how to improve communication skills among team members while using VR to assist with that. Many common workplace issues aren’t because business premises are poor, but are due to workers lacking in soft skills – particularly effective communication.
+In the workplace, companies may be wondering how to improve communication skills among team members while using VR to assist with that. Many common workplace issues aren't because business premises are poor, but are due to workers lacking in soft skills – particularly effective communication.
 
 
 How to Improve Communication Skills With VR Customer Service Training Simulations
@@ -228,14 +232,14 @@ These training programs provide tips for better communication for employees. The
 This type of training leads to increased customer satisfaction. It helps decrease handling times and with significant conflict resolution improvement.
 
 VR for Public Speaking
-The idea of making a presentation or giving a speech brings people back to high school speech class. The fear of what your peers will think and if you’ll make your talking points creeps over before a presentation.
+The idea of making a presentation or giving a speech brings people back to high school speech class. The fear of what your peers will think and if you'll make your talking points creeps over before a presentation.
 
-With VR simulations, employees can face their fears without judgment. Different simulators put you in a situation where you’ll present to an office or crowd of people. You can adjust the settings to where the audience reacts based on the performance the employee gives.
+With VR simulations, employees can face their fears without judgment. Different simulators put you in a situation where you'll present to an office or crowd of people. You can adjust the settings to where the audience reacts based on the performance the employee gives.
 
 Avatars enthuse or look bored from your speech. The assignment given may be to collect data and from that come up with a story or explain a product. This is a sure way to gain the confidence needed to present a business proposal, speech, or pitch an idea.
 
 Different things like keywords, body language, and tone are analyzed by AI to offer comprehensive feedback. This lets employees think on their feet. It nudges them to be confident in their professional abilities with tangible feedback offered to them.
-                    </pre>
+                </pre>
 
                 <div class="page_link">
                     <a href="https://www.frontiersin.org/articles/10.3389/frvir.2021.645153/full" target="_blank"
@@ -243,35 +247,156 @@ Different things like keywords, body language, and tone are analyzed by AI to of
                 </div>
 
                 <div class="sub_contents_back">
-                    <div class="btn_close" onclick="content_wrap_visible_2()">
-                        <span class="material-symbols-outlined">
-                            arrow_back
-                        </span>
+                    <div class="btn_close" onclick="close_all_subcontents()">
+                        <span class="material-symbols-outlined">arrow_back</span>
                         Back
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 3. VR for Communication and Well-being of the Elderly -->
+        <!-- SUB PAGE 3. Tourism 中間ページ（サブカード2枚） -->
         <div class="sub_contents_wrap">
             <div class="sub_container">
                 <div class="explanation">
                     <div class="big_title">
+                        Innovative Applications of Digital Technologies for Tourism
+                    </div>
+                </div>
+
+                <!-- 中間カード2枚 -->
+                <div class="contents_wrap mid_contents_wrap">
+                    <div class="content">
+                        <div class="img_wrap" onclick="open_subcontent(3)">
+                            <!-- TODO: image/tourism_retro.jpg に差し替え -->
+                            <img src="image/main_3.jpg" alt="VR and 3D Immersive Content for Retro Tourism">
+                        </div>
+                        <div class="explanation">
+                            VR and 3D Immersive Content for Retro Tourism
+                        </div>
+                    </div>
+                    <div class="content" onclick="open_subcontent(4)">
+                        <div class="img_wrap">
+                            <!-- TODO: image/tourism_dishes.jpg に差し替え -->
+                            <img src="image/Japanese_dishes.png"
+                                alt="Digital Image Impressions of Japanese Dishes & Their Effects">
+                        </div>
+                        <div class="explanation">
+                            Digital Image Impressions of Japanese Dishes &amp; Their Effects
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub_contents_back">
+                    <div class="btn_close" onclick="close_all_subcontents()">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Back
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUB PAGE 4. VR and 3D Immersive Content for Retro Tourism -->
+        <div class="sub_contents_wrap">
+            <div class="sub_container">
+                <div class="explanation">
+                    <div class="big_title">
+                        VR and 3D Immersive Content for Retro Tourism
+                    </div>
+                    <div class="small_title">
                         coming soon
                     </div>
                 </div>
 
                 <div class="sub_contents_back">
-                    <div class="btn_close" onclick="content_wrap_visible_2()">
-                        <span class="material-symbols-outlined">
-                            arrow_back
-                        </span>
+                    <div class="btn_close" onclick="open_subcontent(2)">
+                        <span class="material-symbols-outlined">arrow_back</span>
                         Back
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- SUB PAGE 5. Digital Image Impressions of Japanese Dishes & Their Effects -->
+        <div class="sub_contents_wrap">
+            <div class="sub_container">
+                <div class="explanation">
+                    <div class="big_title">
+                        Digital Image Impressions of Japanese Dishes &amp; Their Effects
+                    </div>
+                </div>
+
+                <div class="thesis">
+                    <div class="small_title small_title--left">
+                        Japanese cuisine represents important visual information that symbolizes Japanese culture and
+                        lifestyle and is a major factor motivating international tourists to visit Japan. In recent
+                        years,
+                        digital media, particularly social networking services (SNS) and websites, have become key
+                        platforms for sharing tourism-related information, making the effective use of images
+                        increasingly
+                        important. This study focuses on the shooting angles of food images and examines how differences
+                        in camera angles influence viewers' impressions of Japanese dishes. It also analyzes variations
+                        in these impressions across different nationalities.
+                    </div>
+                </div>
+
+                <div class="thesis">
+                    <div class="small_title small_title--left">
+                        <strong>Multi-language Questionnaire Webpage for the Study</strong><br>
+                        <a href="https://sit-kankousurvey.sakura.ne.jp/system2/multilingual.html" target="_blank"
+                            rel="noopener noreferrer">
+                            https://sit-kankousurvey.sakura.ne.jp/system2/multilingual.html
+                        </a>
+                    </div>
+                </div>
+
+                <div class="thesis">
+                    <div class="small_title small_title--left">
+                        <strong>Examples of the survey sample images: Tempura</strong>
+                    </div>
+                </div>
+
+                <!-- 天ぷら画像4枚 TODO: 実画像に差し替え -->
+                <div class="sub_contents dish_contents">
+                    <div class="content">
+                        <!-- TODO: image/tempura_1.jpg に差し替え -->
+                        <img src="image/jfood_1.png" alt="45 degree angle Without Tempura dipping sauce">
+                        <div class="video_explanation">
+                            45 degree angle<br>Without Tempura dipping sauce
+                        </div>
+                    </div>
+                    <div class="content">
+                        <!-- TODO: image/tempura_2.jpg に差し替え -->
+                        <img src="image/jfood_2.png" alt="Overhead angle Without Tempura dipping sauce">
+                        <div class="video_explanation">
+                            Overhead angle<br>Without Tempura dipping sauce
+                        </div>
+                    </div>
+                    <div class="content">
+                        <!-- TODO: image/tempura_3.jpg に差し替え -->
+                        <img src="image/jfood_3.png" alt="45 degree angle With Tempura dipping sauce">
+                        <div class="video_explanation">
+                            45 degree angle<br>With Tempura dipping sauce
+                        </div>
+                    </div>
+                    <div class="content">
+                        <!-- TODO: image/tempura_4.jpg に差し替え -->
+                        <img src="image/jfood_4.png" alt="Overhead angle With Tempura dipping sauce">
+                        <div class="video_explanation">
+                            Overhead angle<br>With Tempura dipping sauce
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub_contents_back">
+                    <div class="btn_close" onclick="open_subcontent(2)">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Back
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
